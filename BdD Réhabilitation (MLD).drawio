@@ -1,0 +1,73 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="doCMb7OPEuhO2K7QkIap">
+    <mxGraphModel dx="1863" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-1" value="Patient_Rééducation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="650" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-4" value="&lt;div&gt;personne_id&lt;/div&gt;&lt;b&gt;&lt;u&gt;patientReeduc_id&lt;/u&gt;&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="E-CFwYmauPvcHo1KGwYZ-1" vertex="1">
+          <mxGeometry y="26" width="140" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-16" value="Chambre" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="840" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-17" value="&lt;div&gt;&lt;b&gt;&lt;u&gt;chambre_id&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;departement_id&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="E-CFwYmauPvcHo1KGwYZ-16" vertex="1">
+          <mxGeometry y="26" width="140" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-21" value="Lits_Rééducation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="470" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-22" value="&lt;div&gt;lit_id&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;litReeduc_id&lt;/u&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;statut&lt;/div&gt;&lt;div&gt;patientReeduc_id&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="E-CFwYmauPvcHo1KGwYZ-21" vertex="1">
+          <mxGeometry y="26" width="140" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-25" value="" style="endArrow=none;startArrow=block;endFill=0;startFill=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="E-CFwYmauPvcHo1KGwYZ-21" target="E-CFwYmauPvcHo1KGwYZ-1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="400" y="750" as="sourcePoint" />
+            <mxPoint x="400" y="831" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-30" value="" style="endArrow=none;startArrow=block;endFill=0;startFill=1;html=1;rounded=0;entryX=0.033;entryY=0.057;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.461;exitY=0.979;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="E-CFwYmauPvcHo1KGwYZ-40" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-104.62" y="670" as="sourcePoint" />
+            <mxPoint x="89.99999999999989" y="691.358" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-106" y="691" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-31" value="Séjours" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-190" y="820" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-32" value="&lt;div&gt;&lt;b&gt;&lt;u&gt;sejour_id&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;patientReeduc_id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;date_debut&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;date_fin&lt;/div&gt;&lt;div&gt;type_rehabilitation&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="E-CFwYmauPvcHo1KGwYZ-31" vertex="1">
+          <mxGeometry y="26" width="140" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-35" value="Équipements_Rééducation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="550" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-36" value="&lt;div&gt;equipement_id&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;equipementReeduc_id&lt;/u&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;type&lt;/div&gt;&lt;div&gt;statut&lt;/div&gt;&lt;div&gt;patientReeduc_id&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="E-CFwYmauPvcHo1KGwYZ-35" vertex="1">
+          <mxGeometry y="26" width="160" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-39" value="Priorités_Transferts" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-180" y="550" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-40" value="&lt;div&gt;&lt;b&gt;&lt;u&gt;priorite_id&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;personne_id&lt;/div&gt;&lt;div&gt;departement_destination&lt;/div&gt;&lt;div&gt;niveau_priorite&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="E-CFwYmauPvcHo1KGwYZ-39" vertex="1">
+          <mxGeometry y="26" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="E-CFwYmauPvcHo1KGwYZ-43" value="" style="endArrow=none;startArrow=classic;endFill=0;startFill=1;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="E-CFwYmauPvcHo1KGwYZ-31" target="E-CFwYmauPvcHo1KGwYZ-4" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="40" y="758" as="sourcePoint" />
+            <mxPoint x="120" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eergT2OX-bFsntspa3ci-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="E-CFwYmauPvcHo1KGwYZ-4" target="E-CFwYmauPvcHo1KGwYZ-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eergT2OX-bFsntspa3ci-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.016;entryY=0.687;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="E-CFwYmauPvcHo1KGwYZ-16" target="E-CFwYmauPvcHo1KGwYZ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
