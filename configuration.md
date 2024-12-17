@@ -26,7 +26,7 @@
 | Système  |     Type de périphérique     | Système de fichiers | Stockage | Chiffré | Options de montage |
 | :--------------- |:---------------:|:-----:|:-----:|:-----:|:-----:|
 | / | **RAID 1** | **xfs** | 8Go x 2 | oui | defaults,nodev |
-| /boot | **RAID 1** | **ext4** | 1024Mo x 2| non | defaults,ro,nodev,nosuid,noexec |
+| /boot | **Partition Standard** | **ext4** | 1024Mo | non | defaults,ro,nodev,nosuid,noexec |
 | /tmp | **LVM [Fedora]** | **ext4** | 1024Mo | non | defaults,noexec,nosuid,nodev |
 | /var | **RAID 1** | **ext4** | 3Go x 2 | oui | defaults,noexec,nosuid,nodev |
 | /boot/efi | **Partition standard** | **EFI System partition** | 1024 Mo | non | / |
