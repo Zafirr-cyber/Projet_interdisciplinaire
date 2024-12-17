@@ -12,6 +12,8 @@
     - dubois.theo : **duboisG4Linux**
     - duchesne.guillaume : **duchesneG4Linux**
     - mauroit.antoine : **mauroitG4Linux**
+- Utilisateur & mot de passe *GRUB* :
+    - bruyere.maximilien : **grubG4Linux**
 
 ## Partitionnement
 
