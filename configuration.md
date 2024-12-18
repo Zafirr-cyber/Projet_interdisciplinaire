@@ -14,6 +14,10 @@
     - mauroit.antoine : **mauroitG4Linux**
 - Utilisateur & mot de passe *GRUB* :
     - bruyere.maximilien : **grubG4Linux**
+- Mot de passe **database** : 
+    - antoine : yyyyyy
+    - cyril : yyyyyy
+    - Root désactivé
 
 ## Partitionnement
 
