@@ -61,7 +61,7 @@ Chaque jour à 12h pendant la pause.
 
 Les sauvegardes seront effacées après 1 semaine.
 
-4. A quel endroit seront stockées les sauvegardes et l'historique des sauvegardes ?  
+4. À quel endroit seront stockés les sauvegardes et l'historique des sauvegardes ?  
 
 Les sauvegardes seront stockées dans une partition à part : `/backup`
 
@@ -83,13 +83,13 @@ Il sera possible de les faire manuellement grâce à la commande `dailybackup`.
 
 9. Quelle est la méthode de sauvegarde la plus appropriée ?  
 
-La méthode de sauvegarde la plus appropriée est la sauvegarde incrémentielles car
+La méthode de sauvegarde la plus appropriée est la sauvegarde incrémentielle, car
 elle met à jour seulement les fichiers modifiés grâce à la commande `rsync`. Elle 
 est appropriée pour réduire le temps de sauvegarde et l'espace de stockage nécessaire.
 
 10.  Quel est le support le plus approprié ?  
 
-Il aurait été approprié de prendre un serveur de backup à part mais dans le cadre de ce 
+Il aurait été approprié de prendre un serveur de backup à part, mais, dans le cadre de ce 
 projet, il est préférable de n'utiliser qu'une simple partition dans le but de stocker 
 les données.
 
