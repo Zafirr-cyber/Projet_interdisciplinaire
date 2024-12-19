@@ -1,0 +1,56 @@
+# Paramètres de base
+$prenomList = @(
+    "Alice", "Bob", "Charlie", "Diane" 
+)
+
+$nomList = @(
+    "MARTIN", "DUPONT", "LAMBERT", "LEFEBVRE"
+)
+
+$departements = @{
+    "Pediatrie" = ".pediatrie.lan"
+    "Rehabilitation" = ".rehabilitation.lan"
+    "Soins_intensifs" = ".soins_intensifs.lan"
+    "General" = ".general.lan"
+}
+
+# Racine du domaine et unité organisationnelle
+$baseOU = "DC=hopital,DC=lan"
+
+# Fonction pour créer un utilisateur
+function Create-User {
+    param (
+        [string]$Prenom,
+        [string]$Nom,
+        [string]$Departement
+    )
+
+    $suffix = $departements[$Departement]
+    $userPrincipalName = "$($Prenom.ToLower()).$($Nom.ToLower())@$($suffix.TrimStart('.'))"
+    $samAccountName = "$($Prenom.ToLower()).$($Nom.ToLower())"
+    $userOU = "OU=Personnels,OU=$Departement,$baseOU"
+
+    # Génération de l'utilisateur
+    New-ADUser -Name "$Prenom $Nom" `
+        -GivenName $Prenom `
+        -Surname $Nom `
+        -SamAccountName $samAccountName `
+        -UserPrincipalName $userPrincipalName `
+        -AccountPassword (ConvertTo-SecureString "P@ssw0rd!" -AsPlainText -Force) `
+        -Enabled $true `
+        -Path $userOU
+
+    Write-Host "Utilisateur $Prenom $Nom créé avec UPN : $userPrincipalName dans OU : $userOU"
+}
+
+# Génération d'un utilisateur par département
+$index = 0
+foreach ($departement in $departements.Keys) {
+    $prenom = $prenomList[$index % $prenomList.Count]  # Sélectionne un prénom dans la liste
+    $nom = $nomList[$index % $nomList.Count]  # Sélectionne un nom dans la liste
+
+    # Création de l'utilisateur
+    Create-User -Prenom $($prenom.Substring(0,1).ToUpper() + $prenom.Substring(1).ToLower()) -Nom $nom -Departement $departement
+
+    $index++
+}
