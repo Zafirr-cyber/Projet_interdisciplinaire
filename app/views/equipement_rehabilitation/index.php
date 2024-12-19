@@ -1,3 +1,11 @@
+<?php
+
+require '../../controllers/EquipementRehabilitationController.php';
+    $d = new EquipementRehabilitationController();
+    $equipements = $d->render();
+    
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +14,7 @@
 </head>
 <body>
     <h1>Liste des équipements de réhabilitation</h1>
-    <table border="1">
+    <table>
         <tr>
             <th>ID</th>
             <th>Type</th>

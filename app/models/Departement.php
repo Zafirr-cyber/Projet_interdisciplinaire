@@ -1,6 +1,6 @@
 <?php
 
-require_once  '../config/database.php';
+require_once  '../../../config/database.php';
 
 class Departement {
     private $conn;
@@ -14,12 +14,6 @@ class Departement {
         $database = new Database();
         $this->conn = $database->getConnection();
 
-        // Debugging output
-        if ($this->conn) {
-            echo "Database connection successful.<br>";
-        } else {
-            echo "Database connection failed.<br>";
-        }
     }
 
     public function read() {
@@ -29,7 +23,8 @@ class Departement {
         $query = "SELECT * FROM " . $this->table_name;
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
-        return $stmt;
+        $test = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $test;
     }
 }
 ?>

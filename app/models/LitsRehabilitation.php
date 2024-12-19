@@ -1,5 +1,5 @@
 <?php
-require_once '../../config/database.php';
+require_once '../../../config/database.php';
 
 class LitsRehabilitation {
     private $conn;
@@ -17,10 +17,14 @@ class LitsRehabilitation {
     }
 
     public function read() {
+        if ($this->conn === null) {
+            throw new Exception("Database connection failed");
+        }
         $query = "SELECT * FROM " . $this->table_name;
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
-        return $stmt;
+        $test = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $test;
     }
 }
 ?>

@@ -1,3 +1,10 @@
+<?php
+
+require '../../controllers/PatientsRehabilitationController.php';
+    $patient = new PatientsRehabilitationController();
+    $patients = $patient->render();
+    
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +15,7 @@
 <body>
     <h1>Liste des patients de réhabilitation</h1>
     
-    <table border="1">
+    <table>
         <tr>
             <th>ID</th>
             <th>Nom</th>

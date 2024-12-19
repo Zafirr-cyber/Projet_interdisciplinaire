@@ -1,12 +1,15 @@
 <?php
-require_once '../models/PatientsRehabilitation.php';
+require_once '../../models/PatientsRehabilitation.php';
 
 class PatientsRehabilitationController {
-    public function index() {
-        $patient = new PatientsRehabilitation();
-        $stmt = $patient->read();
-        $patients = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        include '../views/patients_rehabilitation/index.php';
+    private $patient;
+
+    public function __construct() {
+        $this->patient = new PatientsRehabilitation();  
+    }
+
+    public function render() {
+        return $this->patient->read();
     }
 }
 ?>

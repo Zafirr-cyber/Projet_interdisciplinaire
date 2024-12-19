@@ -1,3 +1,10 @@
+<?php
+
+require '../../controllers/LitsRehabilitationController.php';
+    $lit = new LitsRehabilitationController();
+    $lits = $lit->render();
+    
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +13,7 @@
 </head>
 <body>
     <h1>Liste des lits de réhabilitation</h1>
-    <table border="1">
+    <table>
         <tr>
             <th>ID</th>
             <th>Disponible</th>
