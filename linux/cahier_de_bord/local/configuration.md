@@ -97,6 +97,7 @@ les données.
 
 ### Services installés et configurés
 
+- **SSH key** : Utilisation de clés ssh pour une connexion sécurisée.
 - **Audit** : Configuration de l'audit pour surveiller les changements dans les fichiers critiques.
 - **Rootkit** : Installation et configuration de `rkhunter` et `chkrootkit` pour la détection des rootkits.
 - **Tests de sécurité** : Installation et exécution de `lynis` pour les audits de sécurité.
