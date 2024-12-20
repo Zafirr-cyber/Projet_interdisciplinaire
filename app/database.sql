@@ -22,7 +22,7 @@ CREATE TABLE  departement (
 -- --------------------------------------------------------
 CREATE TABLE equipement_rehabilitation (
   equipement_id INT(11) NOT NULL AUTO_INCREMENT,
-  type_equipement VARCHAR(100) NOT NULL,
+  type_equipement ENUM('fauteuil','elastique','haltere') NOT NULL,
   disponible TINYINT(1) NOT NULL DEFAULT 1,
   date_modification DATE NOT NULL,
   departement_id INT(11),
@@ -51,6 +51,7 @@ CREATE TABLE patients_réhabilitation (
   prenom VARCHAR(255) NOT NULL,
   lit_id INT(11) NOT NULL,
   departement_id INT(11),
+  priorite INT(2) NOT NULL,
   PRIMARY KEY (patient_id),
   FOREIGN KEY (lit_id) REFERENCES lits_rehabilitation(lit_id) ON DELETE CASCADE,
   FOREIGN KEY (departement_id) REFERENCES departement(departement_id) ON DELETE SET NULL
@@ -72,7 +73,9 @@ CREATE TABLE suivi_patients (
   id_suivi INT(11) NOT NULL AUTO_INCREMENT, 
   id_patient INT(11) NOT NULL,             
   date_mesure DATE NOT NULL,              
-  progression DECIMAL(5,2) NOT NULL,       
+  progression INT(2) NOT NULL, 
+  date_entree DATE NOT NULL,
+  date_sortie DATE ,
   PRIMARY KEY (id_suivi),                  
   FOREIGN KEY (id_patient) REFERENCES patients_réhabilitation(patient_id) 
   ON DELETE CASCADE                         

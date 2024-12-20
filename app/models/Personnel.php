@@ -1,19 +1,17 @@
 <?php
+require_once '../../../config/database.php';
 
-require_once  '../../../config/database.php';
-
-class Departement {
+class Personnel {
     private $conn;
-    private $table_name = "departement";
+    private $table_name = "personnel_medical";
 
-    public $departement_id;
-    public $departement_nom;
-    public $department_description;
+    public $personeel_medical_id;
+    public $nom;
+    public $prenom;
 
     public function __construct() {
         $database = new Database();
         $this->conn = $database->getConnection();
-
     }
 
     public function read() {
@@ -27,15 +25,15 @@ class Departement {
         return $test;
     }
     public function create() {
-        $query = "INSERT INTO " . $this->table_name . " (departement_nom, departement_description) VALUES (:nom, :description)";
+        $query = "INSERT INTO " . $this->table_name . " (nom, prenom) VALUES (:nom, :prenom)";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':nom', $this->departement_nom);
-        $stmt->bindParam(':description', $this->departement_description);
+        $stmt->bindParam(':nom', $this->nom);
+        $stmt->bindParam(':prenom', $this->prenom);
         return $stmt->execute();
     }
     
     public function getById($id) {
-        $query = "SELECT * FROM " . $this->table_name . " WHERE departement_id = :id";
+        $query = "SELECT * FROM " . $this->table_name . " WHERE personnel_medical_id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
@@ -43,16 +41,16 @@ class Departement {
     }
     
     public function update() {
-        $query = "UPDATE " . $this->table_name . " SET departement_nom = :nom, departement_description = :description WHERE departement_id = :id";
+        $query = "UPDATE " . $this->table_name . " SET nom = :nom, prenom = :prenom WHERE personnel_medical_id = :id";
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':nom', $this->departement_nom);
-        $stmt->bindParam(':description', $this->departement_description);
-        $stmt->bindParam(':id', $this->departement_id);
+        $stmt->bindParam(':nom', $this->nom);
+        $stmt->bindParam(':prenom', $this->prenom);
+        $stmt->bindParam(':id', $this->personnel_medical_id);
         return $stmt->execute();
     }
     
     public function delete($id) {
-        $query = "DELETE FROM " . $this->table_name . " WHERE departement_id = :id";
+        $query = "DELETE FROM " . $this->table_name . " WHERE personnel_medical_id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':id', $id);
         return $stmt->execute();

@@ -12,6 +12,7 @@ require '../../controllers/LitsRehabilitationController.php';
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
 </head>
 <body>
+    <a href="../../index.php" class="back-button">← Retour à l'accueil</a>
     <h1>Liste des lits de réhabilitation</h1>
     <table>
         <tr>

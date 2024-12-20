@@ -13,6 +13,7 @@ require '../../controllers/PatientsRehabilitationController.php';
 
 </head>
 <body>
+    <a href="../../index.php" class="back-button">← Retour à l'accueil</a>
     <h1>Liste des patients de réhabilitation</h1>
     
     <table>
