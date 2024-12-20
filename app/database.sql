@@ -4,8 +4,8 @@
 /*!40101 SET NAMES utf8mb4 */;
 
 -- Création de la base de données
-CREATE DATABASE IF NOT EXISTS dbrehabilitation;
-USE dbrehabilitation;
+CREATE DATABASE IF NOT EXISTS db_rehabilitation;
+USE db_rehabilitation;
 
 -- --------------------------------------------------------
 -- Structure de la table departement

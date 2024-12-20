@@ -14,6 +14,7 @@ require '../../controllers/LitsRehabilitationController.php';
 <body>
     <a href="../../index.php" class="back-button">← Retour à l'accueil</a>
     <h1>Liste des lits de réhabilitation</h1>
+    <a href="create.php" class="add-button"> Ajouter un lit</a>
     <table>
         <tr>
             <th>ID</th>
@@ -21,6 +22,7 @@ require '../../controllers/LitsRehabilitationController.php';
             <th>Type</th>
             <th>Date de Création</th>
             <th>Date de Modification</th>
+            <th>Actions</th>
         </tr>
         <?php if (isset($lits) && !empty($lits)):
             foreach ($lits as $lit): ?>
@@ -30,10 +32,14 @@ require '../../controllers/LitsRehabilitationController.php';
             <td><?php echo $lit['type_lit']; ?></td>
             <td><?php echo $lit['date_creation']; ?></td>
             <td><?php echo $lit['date_modification']; ?></td>
+            <td>
+                <a href="update.php?id=<?php echo $lit['lit_id']; ?>">Modifier</a> |
+                <a href="delete.php?id=<?php echo $lit['lit_id']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce lit ?');">Supprimer</a>
+            </td>
         </tr>
         <?php endforeach; else: ?>
         <tr>
-            <td colspan ="5" class = "no-data">Aucun lits n'a été trouvé</td>
+            <td colspan ="6" class = "no-data">Aucun lits n'a été trouvé</td>
         </tr>
             <?php endif; ?>
     </table>
